@@ -19,6 +19,6 @@ git clone https://github.com/LCBRU/info.git
 To deploy the app, run the command
 
 ```bash
-install.sh
+install.py
 ```
 
