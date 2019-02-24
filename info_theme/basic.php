@@ -1,18 +1,14 @@
-<?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
+<?php defined('AUTOMAD') or die('Direct access not permitted!');?>
 <@ snippets/header.php @>
 
 	<div class="container">
 		
 		<div class="row">
 			<div id="title" class="col-md-12">
-				<h1>@p(title)</h1>
-				<h2>@p(subtitle)</h2>
+				<h1>@{ title }</h1>
 			</div>
 			<div class="col-md-6">
-				@p(text)
-			</div>
-			<div class="col-md-6">
-				@p(text_2)
+                @{ text }
 			</div>
 		</div>		
 			
