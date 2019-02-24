@@ -1,15 +1,24 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>@{ sitename } / @{ title }</title>
-	<@ with @{ favicon } @><link href="@{ :file }" rel="shortcut icon" type="image/x-icon" /><@ end @>
-	<@ with @{ appleTouchIcon } @><link href="@{ :file }" rel="apple-touch-icon" /><@ end @>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	@t(metaTitle { title: @p(meta_title) })
+	@t(jquery)
+	@t(bootstrapJS)
+	@t(bootstrapCSS)
+	<link type="text/css" rel="stylesheet" href="@t(themeURL)/css/standard.css?v=1" />
 </head>
 
-<body>
-	<div class="container">
+
+<body class="level-@t(level)">
+	
+	@x(Navbar {
+		brand: @s(brand),
+		fluid: false,
+		fixedToTop: true,
+		search: "Search",
+		levels: 2
+	})
