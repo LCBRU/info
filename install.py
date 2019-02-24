@@ -36,3 +36,4 @@ def get_automad():
 get_automad()
 
 subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/cache'.format(HTTP_DIR)])
+subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/pages'.format(HTTP_DIR)])
