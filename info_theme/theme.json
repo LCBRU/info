@@ -1,8 +1,8 @@
 {
-	"name": "Tutorial",
-	"description": "A collection of tutorial templates",
-	"author": "Marc Anton Dahmen",
-	"version": "1.2.3",
+	"name": "BRC Info Theme",
+	"description": "Theme for BRC Info",
+	"author": "Richard Bramley",
+	"version": "1.0.0",
 	"license": "MIT",
 	"tooltips": {
 		"date": "Set a date to show up as post or project info",
