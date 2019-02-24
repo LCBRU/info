@@ -22,3 +22,13 @@ To deploy the app, run the command
 install.py
 ```
 
+## Site Management
+
+To edit the site, use the Dashboard at /dashboard.
+
+## User Management
+
+The first time that you access the dashboard, you will be asked to create a user.
+
+New users can then be added through the dashbaord.
+

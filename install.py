@@ -13,6 +13,8 @@ HTTP_DIR='/local/www/htdocs/'
 
 
 def get_automad():
+    pwd = os.path.realpath('.')
+
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
@@ -25,6 +27,10 @@ def get_automad():
 
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
+
+    os.chdir(pwd)
+    shutil.copytree('./info_theme', '{}/packages/lbrc/info_theme'.format(HTTP_DIR))
+    shutil.copy('./accounts.php', '{}/config/'.format(HTTP_DIR))
 
 
 get_automad()
