@@ -1,4 +1,10 @@
-<?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
+<?php defined('AUTOMAD') or die('Direct access not permitted!');
+
+if ($_SERVER['HTTP_X_FORWARDED_FOR'] == '86.17.1.198') {
+  $uhl = 'uhl';
+}
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,7 +21,7 @@
     <title>BRC Intranet</title>
   </head>
 
-  <body class="container">
+  <body class="container @{ uhl }">
     <header>
         <h1>Leicester<br>
             <span class="d-none d-sm-block">Biomedical Research Centre</span>
