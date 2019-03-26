@@ -3,7 +3,7 @@
 
 <footer>
 	<div class="container">
-		Copyright &copy; 2018 NIHR Leicester Biomedical Research Centre
+		Copyright &copy; @{ :now | dateFormat('Y') } @{ sitename } NIHR Leicester Biomedical Research Centre
 	</div>
 </footer>
 

@@ -7,7 +7,5 @@
 	"tooltips": {
 		"date": "Set a date to show up as post or project info",
 		"email": "Your contact email address",
-		"textTeaser": "The content of the teaser section",
-		"textTeaserGerman": "The german translation of the textTeaser variable"
 	}
 }
