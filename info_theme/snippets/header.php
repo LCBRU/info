@@ -1,23 +1,31 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@{ sitename } / @{ title | def('404') }</title>
-        <@ ../../snippets/favicons.php @>
-        <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
-        <link href="/packages/standard/alpha/dist/alpha.min.css" rel="stylesheet">
-        <script src="/packages/standard/dist/standard.min.js"></script>
-        <# Add optional header items. #>
-        @{ itemsHeader }
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body class="@{ theme | sanitize } @{ :template | sanitize }">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ '/static/css/brc.css'|asseturl }}">
 
-        <@ navbar.php @>
+    <title>BRC Intranet: {% block title %}Welcome{% endblock %}</title>
+  </head>
 
-        <div class="uk-container uk-container-center navbar-push">
-                <div class="uk-block">
+  <body class="container">
+    <header>
+        <h1>Leicester<br>
+            <span class="d-none d-sm-block">Biomedical Research Centre</span>
+            <span class="d-sm-none">BRC</span>
+        </h1>
+    </header>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand fas fa-home" href="{{ '/'|url }}"></a>
+<!--        <a class="nav-link" href="{{ '/studies'|url }}" title="Studies">Studies</a> -->
+    </nav>
+
+    <div>
