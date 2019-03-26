@@ -104,9 +104,15 @@ section {
     content: " (UHL network only)";
 }
 
-.card-body a.link.uhl_only:hover {
+.not_uol .card-body a.link.uol_only {
     color: white;
-    background-color: #888888;
-    border-color: #666666;
+    display: block;
+    margin: 0px 50px 20px 50px;
+    background-color: #999999;
+    border-color: #777777;
     pointer-events: none;
+}
+
+.not_uol .card-body a.link.uol_only:after {
+    content: " (UHL network only)";
 }

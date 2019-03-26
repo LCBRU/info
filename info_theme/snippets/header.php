@@ -1,9 +1,10 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!');
 
-if ($_SERVER['HTTP_X_FORWARDED_FOR'] == '86.17.1.198') {
-  $uhl = 'uhl';
-} else {
-  $uhl = 'not_uhl';
+if ($_SERVER['HTTP_X_FORWARDED_FOR'] != '86.17.1.198') {
+  $notuhl_class = 'not_uhl';
+}
+if (substr($_SERVER['HTTP_X_FORWARDED_FOR'], 0, 7) != '143.210') {
+  $notuol_class = 'not_uol';
 }
 
 ?>
@@ -23,7 +24,7 @@ if ($_SERVER['HTTP_X_FORWARDED_FOR'] == '86.17.1.198') {
     <title>BRC Intranet</title>
   </head>
 
-  <body class="container <?php echo $uhl ?>">
+  <body class="container <?php echo $notuhl_class; echo $notuol_class ?>">
     <header>
         <h1>Leicester<br>
             <span class="d-none d-sm-block">Biomedical Research Centre</span>
