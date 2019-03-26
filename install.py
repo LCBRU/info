@@ -31,6 +31,7 @@ def get_automad():
     os.chdir(pwd)
     shutil.copytree('./info_theme', '{}/packages/lbrc/info_theme'.format(HTTP_DIR))
     shutil.copy('./accounts.php', '{}/config/'.format(HTTP_DIR))
+    shutil.copy('./config.json', '{}/config/'.format(HTTP_DIR))
 
 
 get_automad()
