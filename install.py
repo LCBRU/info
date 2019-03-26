@@ -31,8 +31,8 @@ def get_automad():
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
 
-    shutil.rmtree(os.path.join(HTTP_DIR, 'cache'))
-    shutil.rmtree(os.path.join(HTTP_DIR, 'pages'))
+    os.unlink(os.path.join(HTTP_DIR, 'cache'))
+    os.unlink(os.path.join(HTTP_DIR, 'pages'))
     os.symlink(os.path.join(WWW_DIR, 'cache'), os.path.join(HTTP_DIR, 'cache'))
     os.symlink(os.path.join(WWW_DIR, 'pages'), os.path.join(HTTP_DIR, 'pages'))
 
