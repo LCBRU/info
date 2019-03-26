@@ -5,7 +5,7 @@
 		
 		<div class="row">
 			<div id="title" class="col-md-12">
-				<h1>@{ title }</h1>
+				<h2>@{ title }</h2>
 			</div>
 			<div class="col-md-6">
                 @{ text }
