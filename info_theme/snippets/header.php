@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="/packages/lbrc/info_theme/css/brc.css?v=1">
 
-    <title>BRC Intranet: {% block title %}Welcome{% endblock %}</title>
+    <title>BRC Intranet</title>
   </head>
 
   <body class="container">
