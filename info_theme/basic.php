@@ -15,14 +15,14 @@
 	</div>
 </div>
 
+<@ snippets/javascript.php @>
+
 <script>
-$(function() {
-	$.get("packages/lbrc/info_theme/tools/ip.php", function( data ) {
-		alert("Load was performed.");
+	$(function() {
+		$.get("packages/lbrc/info_theme/tools/ip.php", function( data ) {
+			alert("Load was performed.");
+		});
 	});
-});
-
-
 </script>
 
 <@ snippets/footer.php @>
