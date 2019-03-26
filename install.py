@@ -28,6 +28,9 @@ def get_automad():
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
 
+    shutil.rmtree('{}/cache'.format(HTTP_DIR))
+    shutil.rmtree('{}/pages'.format(HTTP_DIR))
+
     os.chdir(pwd)
     shutil.copytree('./info_theme', '{}/packages/lbrc/info_theme'.format(HTTP_DIR))
     shutil.copy('./accounts.php', '{}/config/'.format(HTTP_DIR))
