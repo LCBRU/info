@@ -96,11 +96,11 @@ section {
     display: block;
     margin: 0px 50px 20px 50px;
     background-color: #999999;
-    border-color: #0083BF;
+    border-color: #777777;
 }
 
-.card-body a.link:hover {
+.card-body a.link:hover a.link.uhl_only {
     color: white;
-    background-color: #00415f;
-    border-color: #00415f;
+    background-color: #888888;
+    border-color: #666666;
 }
