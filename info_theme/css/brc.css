@@ -114,5 +114,5 @@ section {
 }
 
 .not_uol .card-body a.link.uol_only:after {
-    content: " (UHL network only)";
+    content: " (UOL network only)";
 }
