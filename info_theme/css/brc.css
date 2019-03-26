@@ -101,7 +101,7 @@ section {
 }
 
 .not_uhl .card-body a.link.uhl_only:after {
-    content: " - available in UHL network only";
+    content: " (UHL network only)";
 }
 
 .card-body a.link.uhl_only:hover {
