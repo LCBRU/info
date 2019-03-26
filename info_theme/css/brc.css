@@ -100,6 +100,10 @@ section {
     pointer-events: none;
 }
 
+.not_uhl .card-body a.link.uhl_only:after {
+    content: " - available in UHL network only";
+}
+
 .card-body a.link.uhl_only:hover {
     color: white;
     background-color: #888888;
