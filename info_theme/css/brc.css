@@ -97,10 +97,12 @@ section {
     margin: 0px 50px 20px 50px;
     background-color: #999999;
     border-color: #777777;
+    pointer-events: none;
 }
 
-.card-body a.link:hover a.link.uhl_only {
+.card-body a.link.uhl_only:hover {
     color: white;
     background-color: #888888;
     border-color: #666666;
+    pointer-events: none;
 }
