@@ -1,0 +1,92 @@
+body {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.navbar a {
+    color: #333;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+header {
+    background-image: url(../images/bars-top.svg);
+    background-size: 100% auto;
+    padding: 15px 0 0 0;
+}
+
+h1 {
+    background-color: white;
+    margin: 0;
+    padding: 50px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: url(../images/nihr-logo-70.png);
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-origin: content-box;
+}
+
+footer {
+    margin-top: 60px;
+}
+
+footer div {
+    background-color: #333;
+    color: white;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.navbar{
+    padding: 10px 0;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0;
+    height: 40px;
+    line-height: 20px;
+}
+
+.navbar a:hover {
+    background-color: #e1261c;
+    color: white;
+}
+
+.navbar .navbar-brand {
+    font-size: 15px;
+    background-color: #e1261c;
+    color: white;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #76BC43;
+    color: white;
+    font-weight: bold;
+}
+
+.card-body {
+    columns: 2;
+}
+
+.card-body a.link {
+    color: white;
+    display: block;
+    margin: 0px 50px 20px 50px;
+    background-color: #0083BF;
+    border-color: #0083BF;
+}
+
+.card-body a.link:hover {
+    color: white;
+    background-color: #00415f;
+    border-color: #00415f;
+}
