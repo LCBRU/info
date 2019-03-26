@@ -1,18 +1,27 @@
 <?php defined('AUTOMAD') or die('Direct access not permitted!'); ?>
-
-	<div class="container">
-		
-		<div class="row">
-			<div class="col-md-12">@t(navBreadcrumbs { separator: "<span class=\"glyphicon glyphicon-chevron-right\"></span>" })</div>
-		</div>
-			
-		<div class="row">
-			<div class="col-md-3"><span class="glyphicon glyphicon-copyright-mark"></span> @t(year) by <a href="/">@s(sitename)</a></div>
-			<div class="col-md-3"><span class="glyphicon glyphicon-envelope"></span> @s(email)</div>
-			<div class="col-md-3"><span class="glyphicon glyphicon-star"></span> <a href="http://automad.org" target="_blank">Made with Automad</a></div>
-		</div>
-	
-	</div>
-
+                <section class="section">
+                        <nav class="breadcrumb" aria-label="breadcrumbs">
+                                <ul>
+                                        <@ newPagelist { 
+                                                type: 'breadcrumbs',
+                                                excludeHidden: false
+                                        } @>
+                                        <@ foreach in pagelist @>
+                                                <li><a href="@{ url }">@{ title }</a></li>
+                                        <@ end @>
+                                </ul>
+                        </nav>
+                </section>
+                <section class="section">
+                        Made with <a href="https://automad.org">Automad</a>
+                        <br />
+                        Released under the <a href="https://automad.org/license">MIT license</a>
+                        <br />
+                        &copy; @{ :now | dateFormat('Y') } by
+                        <a href="https://marcdahmen.de">Marc Anton Dahmen</a>
+                </section>
+        </div>
 </body>
 </html>
+
+
