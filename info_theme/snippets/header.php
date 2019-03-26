@@ -16,7 +16,7 @@
 
 <body class="@{ theme | sanitize } @{ :template | sanitize }">
 
-        <@ ../../snippets/navbar.php @>
+        <@ navbar.php @>
 
         <div class="uk-container uk-container-center navbar-push">
                 <div class="uk-block">
