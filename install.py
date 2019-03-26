@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 WWW_DIR='/local/www/'
-HTTP_DIR='{}htdocs/'.format(WWW_DIR)
+HTTP_DIR=os.path.join(WWW_DIR, 'htdocs')
 
 
 def get_automad():
@@ -29,15 +29,15 @@ def get_automad():
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
 
-    shutil.rmtree('{}/cache'.format(HTTP_DIR))
-    shutil.rmtree('{}/pages'.format(HTTP_DIR))
-    os.symlink('{}/cache'.format(WWW_DIR), '{}/cache'.format(HTTP_DIR))
-    os.symlink('{}/pages'.format(WWW_DIR), '{}/pages'.format(HTTP_DIR))
+    shutil.rmtree(os.path.join(HTTP_DIR, 'cache'))
+    shutil.rmtree(os.path.join(HTTP_DIR, 'pages'))
+    os.symlink(os.path.join(WWW_DIR, 'cache'), os.path.join(HTTP_DIR, 'cache'))
+    os.symlink(os.path.join(WWW_DIR, 'pages'), os.path.join(HTTP_DIR, 'pages'))
 
     os.chdir(pwd)
-    shutil.copytree('./info_theme', '{}/packages/lbrc/info_theme'.format(HTTP_DIR))
-    shutil.copy('./accounts.php', '{}/config/'.format(HTTP_DIR))
-    shutil.copy('./config.json', '{}/config/'.format(HTTP_DIR))
+    shutil.copytree('./info_theme', os.path.join(HTTP_DIR, 'packages/lbrc/info_theme'))
+    shutil.copy('./accounts.php', os.path.join(HTTP_DIR, 'config'))
+    shutil.copy('./config.json', os.path.join(HTTP_DIR, 'config'))
 
 
 get_automad()
