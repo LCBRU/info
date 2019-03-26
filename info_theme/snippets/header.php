@@ -24,8 +24,7 @@
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand fas fa-home" href="{{ '/'|url }}"></a>
-<!--        <a class="nav-link" href="{{ '/studies'|url }}" title="Studies">Studies</a> -->
+        <a class="navbar-brand fas fa-home" href="/"></a>
         <@ newPagelist { excludeHidden: false } @>
 						<@ foreach in pagelist @>
 							<@ if @{ checkboxShowInNavbar } @>
