@@ -4,13 +4,13 @@
 <div>
 	<section>
 		<h2>@{ title }</h2>
-		<p>@{ description }</p>
+		<p>@{ introduction }</p>
 	</section>
 
 	<div class="card">
 		<div class="card-header"></div>
 		<div class="card-body">
-			@{ text }
+			@{ main_text }
 		</div>
 	</div>
 </div>

@@ -5,7 +5,8 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"tooltips": {
-		"date": "Set a date to show up as post or project info",
-		"email": "Your contact email address",
+		"title": "Page title",
+		"introduction": "Page instroduction",
+		"main_text": "The text's main text",
 	}
 }
