@@ -90,3 +90,17 @@ section {
     background-color: #00415f;
     border-color: #00415f;
 }
+
+.not_uhl .card-body a.link.uhl_only {
+    color: white;
+    display: block;
+    margin: 0px 50px 20px 50px;
+    background-color: #999999;
+    border-color: #0083BF;
+}
+
+.card-body a.link:hover {
+    color: white;
+    background-color: #00415f;
+    border-color: #00415f;
+}
