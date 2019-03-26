@@ -9,7 +9,8 @@ import subprocess
 from pathlib import Path
 
 
-HTTP_DIR='/local/www/htdocs/'
+WWW_DIR='/local/www/'
+HTTP_DIR='{}htdocs/'.format(WWW_DIR)
 
 
 def get_automad():
@@ -30,6 +31,8 @@ def get_automad():
 
     shutil.rmtree('{}/cache'.format(HTTP_DIR))
     shutil.rmtree('{}/pages'.format(HTTP_DIR))
+    os.symlink('{}/cache'.format(WWW_DIR), '{}/cache'.format(HTTP_DIR))
+    os.symlink('{}/pages'.format(WWW_DIR), '{}/pages'.format(HTTP_DIR))
 
     os.chdir(pwd)
     shutil.copytree('./info_theme', '{}/packages/lbrc/info_theme'.format(HTTP_DIR))
@@ -39,5 +42,5 @@ def get_automad():
 
 get_automad()
 
-subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/cache'.format(HTTP_DIR)])
-subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/pages'.format(HTTP_DIR)])
+#subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/cache'.format(HTTP_DIR)])
+#subprocess.run(['setfacl', '-m', 'u:wwwrun:rwx', '{}/pages'.format(HTTP_DIR)])
