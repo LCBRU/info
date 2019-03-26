@@ -21,7 +21,7 @@ if ($_SERVER['HTTP_X_FORWARDED_FOR'] == '86.17.1.198') {
     <title>BRC Intranet</title>
   </head>
 
-  <body class="container @{ uhl }">
+  <body class="container <?php echo $uhl ?>">
     <header>
         <h1>Leicester<br>
             <span class="d-none d-sm-block">Biomedical Research Centre</span>
