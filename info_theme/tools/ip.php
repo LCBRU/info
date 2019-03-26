@@ -1,2 +1,2 @@
 <?php 
-echo $_SERVER['X-Forwarded-For'];
+echo $_SERVER['X-FORWARDED-FOR'];
