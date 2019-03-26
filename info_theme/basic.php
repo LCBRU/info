@@ -11,6 +11,6 @@
 			@{ text }
 		</div>
 	</div>
-div>
+</div>
 
 <@ snippets/footer.php @>
