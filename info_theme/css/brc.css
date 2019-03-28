@@ -83,7 +83,7 @@ section {
     margin: 0px 50px 20px 50px;
     background-color: #0083BF;
     border-color: #0083BF;
-    transition: background-color 1s border-color 1s;
+    transition: background-color 2s border-color 2s;
 }
 
 .card-body a.link:hover {
