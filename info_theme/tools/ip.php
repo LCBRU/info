@@ -23,7 +23,7 @@ function ip_in_range( $ip, $range ) {
 if (ip_in_range($_SERVER['HTTP_X_FORWARDED_FOR'], '86.17.1.198/28')){
     echo 'uhl';
 } else if (ip_in_range($_SERVER['HTTP_X_FORWARDED_FOR'], '213.105.70.224/27')){
-    echo 'uhl'
+    echo 'uhl';
 } else if (ip_in_range($_SERVER['HTTP_X_FORWARDED_FOR'], '143.210.0.0/16')){
     echo 'uol';
 }
