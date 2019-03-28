@@ -18,5 +18,4 @@
 </div>
 
 <@ snippets/javascript.php @>
-
 <@ snippets/footer.php @>
