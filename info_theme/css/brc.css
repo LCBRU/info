@@ -98,6 +98,7 @@ section {
     background-color: #999999;
     border-color: #777777;
     pointer-events: none;
+    position: relative;
 }
 
 .not_uhl .card-body a.link.uhl_only:after {
