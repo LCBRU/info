@@ -9,6 +9,8 @@
 
 <script>
   $(function() {
-      alert( "ready!" );
+    $.get( "/packages/lbrc/info_theme/tools", function( data ) {
+      alert( "Load was performed." );
+    });
   });
 </script>
