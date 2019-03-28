@@ -13,26 +13,9 @@
     <link rel="stylesheet" href="/packages/lbrc/info_theme/css/brc.css?v=9">
 
     <title>BRC Intranet</title>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-
   </head>
 
   <body class="container">
-
-    <script>
-      $.get( "/packages/lbrc/info_theme/tools/ip.php", function( data ) {
-        if (data != 'uhl') {
-          $("body").addClass("not_uhl");
-        } else if (data != 'uol') {
-          $("body").addClass("not_uol");
-        }
-      });
-    </script>
-
     <header>
         <h1>Leicester<br>
             <span class="d-none d-sm-block">Biomedical Research Centre</span>
