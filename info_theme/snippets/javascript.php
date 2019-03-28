@@ -10,7 +10,11 @@
 <script>
   $(function() {
     $.get( "/packages/lbrc/info_theme/tools/ip.php", function( data ) {
-      alert( data );
+      if (data != 'uhl') {
+        $("body").addClass("not_uhl");
+      } else if (data != 'uol') {
+        $("body").addClass("not_uol");
+      }
     });
   });
 </script>
