@@ -84,6 +84,7 @@ section {
     background-color: #0083BF;
     border-color: #0083BF;
     transition: background-color 2s border-color 2s;
+    -webkit-transition: background-color 2s border-color 2s;
 }
 
 .card-body a.link:hover {
