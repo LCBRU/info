@@ -102,9 +102,12 @@ section {
 
 .not_uhl .card-body a.link.uhl_only:after {
     content: " (UHL network only)";
-    float: right;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
     color: #222;
     font-size: 0.5em;
+    font-weight: bold;
 }
 
 .not_uol .card-body a.link.uol_only {
