@@ -22,6 +22,13 @@
             <span class="d-sm-none">BRC</span>
         </h1>
     </header>
+    @x(Navbar {
+		brand: @s(brand),
+		fluid: false,
+		fixedToTop: true,
+		search: "Search",
+		levels: 2
+	})
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand fas fa-home" href="/"></a>
