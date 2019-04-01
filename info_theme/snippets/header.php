@@ -24,7 +24,7 @@
     </header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand fas fa-home" href="/"></a>
-        <@ newPagelist { excludeHidden: false } @>
+        <@ newPagelist { } @>
 						<@ foreach in pagelist @>
 							<@ if @{ checkboxShowInNavbar } @>
 								<a class="nav-link" title="@{ title }" href="@{ url }">@{ title }</a>
