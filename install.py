@@ -19,9 +19,9 @@ def get_automad():
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
-        filename = wget.download('https://automad.org/download')
+        automad_zip = wget.download('https://automad.org/download')
 
-        with zipfile.ZipFile(filename,"r") as zip_ref:
+        with zipfile.ZipFile(automad_zip,"r") as zip_ref:
             zip_ref.extractall(tmpdirname)
 
         extracted_dir = next(x for x in Path(tmpdirname).iterdir() if x.is_dir())
@@ -42,8 +42,17 @@ def get_automad():
     os.symlink(os.path.join(WWW_DIR, 'config'), os.path.join(HTTP_DIR, 'config'))
     os.symlink(os.path.join(WWW_DIR, 'shared'), os.path.join(HTTP_DIR, 'shared'))
 
-    os.chdir(pwd)
-    shutil.copytree('./info_theme', os.path.join(HTTP_DIR, 'packages/lbrc/info_theme'))
+    with tempfile.TemporaryDirectory() as tmpdirname:
+        os.chdir(tmpdirname)
+
+        theme_zip = wget.download('https://github.com/LCBRU/brc_automad_theme/archive/master.zip')
+
+        with zipfile.ZipFile(theme_zip,"r") as zip_ref:
+            zip_ref.extractall(tmpdirname)
+
+        extracted_dir = next(x for x in Path(tmpdirname).iterdir() if x.is_dir())
+
+        shutil.copytree(extracted_dir.name, os.path.join(HTTP_DIR, 'packages/'))
 
 
 get_automad()
