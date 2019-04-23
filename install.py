@@ -19,7 +19,7 @@ def get_automad():
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
-        automad_zip = wget.download('https://automad.org/download')
+        automad_zip = wget.download('https://automad.org/download', bar=None)
 
         with zipfile.ZipFile(automad_zip,"r") as zip_ref:
             zip_ref.extractall(tmpdirname)
@@ -46,7 +46,7 @@ def get_automad():
         os.chdir(tmpdirname)
 
         print('1')
-        theme_zip = wget.download('https://github.com/LCBRU/brc_automad_theme/archive/master.zip')
+        theme_zip = wget.download('https://github.com/LCBRU/brc_automad_theme/archive/master.zip', bar=None)
         print('2')
 
         with zipfile.ZipFile(theme_zip,"r") as zip_ref:
