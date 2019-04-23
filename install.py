@@ -16,6 +16,7 @@ HTTP_DIR=os.path.join(WWW_DIR, 'htdocs')
 def get_automad():
     pwd = os.path.realpath('.')
 
+    print('A')
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
@@ -32,6 +33,7 @@ def get_automad():
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
 
+    print('B')
     shutil.rmtree(os.path.join(HTTP_DIR, 'cache'))
     shutil.rmtree(os.path.join(HTTP_DIR, 'pages'))
     shutil.rmtree(os.path.join(HTTP_DIR, 'config'))
@@ -42,6 +44,7 @@ def get_automad():
     os.symlink(os.path.join(WWW_DIR, 'config'), os.path.join(HTTP_DIR, 'config'))
     os.symlink(os.path.join(WWW_DIR, 'shared'), os.path.join(HTTP_DIR, 'shared'))
 
+    print('C')
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
@@ -53,6 +56,7 @@ def get_automad():
         extracted_dir = next(x for x in Path(tmpdirname).iterdir() if x.is_dir())
 
         shutil.copytree(extracted_dir.name, os.path.join(HTTP_DIR, 'packages/brc_automad_theme'))
+    print('D')
 
 
 get_automad()
