@@ -42,6 +42,9 @@ def get_automad():
     os.symlink(os.path.join(WWW_DIR, 'config'), os.path.join(HTTP_DIR, 'config'))
     os.symlink(os.path.join(WWW_DIR, 'shared'), os.path.join(HTTP_DIR, 'shared'))
 
+    shutil.rmtree(os.path.join(HTTP_DIR, 'packages'))
+    os.mkdir(os.path.join(HTTP_DIR, 'packages'))
+
     with tempfile.TemporaryDirectory() as tmpdirname:
         os.chdir(tmpdirname)
 
