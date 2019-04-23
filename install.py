@@ -52,7 +52,7 @@ def get_automad():
 
         extracted_dir = next(x for x in Path(tmpdirname).iterdir() if x.is_dir())
 
-        shutil.copytree(extracted_dir.name, os.path.join(HTTP_DIR, 'packages/'))
+        shutil.copytree(extracted_dir.name, os.path.join(HTTP_DIR, 'packages/brc_automad_theme'))
 
 
 get_automad()
