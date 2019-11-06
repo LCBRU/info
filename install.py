@@ -7,10 +7,12 @@ import tempfile
 import os
 import subprocess
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 
-WWW_DIR='/local/www/'
-HTTP_DIR=os.path.join(WWW_DIR, 'htdocs')
+WWW_DIR=os.getenv('WWW_DIR', "/local/www/")
+HTTP_DIR=os.path.join(WWW_DIR, os.getenv('HTTP_DIR', "htdocs"))
 
 
 def get_automad():
@@ -26,9 +28,13 @@ def get_automad():
 
         extracted_dir = next(x for x in Path(tmpdirname).iterdir() if x.is_dir())
 
-        os.unlink(os.path.join(HTTP_DIR, 'cache'))
-        os.unlink(os.path.join(HTTP_DIR, 'pages'))
-        os.unlink(os.path.join(HTTP_DIR, 'config'))
+        if os.path.exists(os.path.join(HTTP_DIR, 'cache')):
+            os.unlink(os.path.join(HTTP_DIR, 'cache'))
+        if os.path.exists(os.path.join(HTTP_DIR, 'pages')):
+            os.unlink(os.path.join(HTTP_DIR, 'pages'))
+        if os.path.exists(os.path.join(HTTP_DIR, 'config')):
+            os.unlink(os.path.join(HTTP_DIR, 'config'))
+
         shutil.rmtree(HTTP_DIR)
         shutil.copytree(extracted_dir.name, HTTP_DIR)
 
