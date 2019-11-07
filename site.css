@@ -1,37 +1,34 @@
-.not_uhl .card-body a.link.uhl_only {
+.not_uhl .links a.uhl_only {
     color: white;
-    display: block;
-    margin: 0px 50px 20px 50px;
     background-color: #999999;
-    border-color: #777777;
     pointer-events: none;
 }
 
-.not_uhl .card-body a.link.uhl_only:after {
+.not_uhl .links a.uhl_only:after {
     content: "UHL Only";
     position: absolute;
     right: 10px;
     bottom: 0px;
-    color: #00415f;
-    font-size: 0.5em;
+    color: #193e72;
+    font-size: 1em;
     font-weight: bold;
+    font-family: Lato;
 }
 
-.not_uol .card-body a.link.uol_only {
+
+.not_uol .links a.uol_only {
     color: white;
-    display: block;
-    margin: 0px 50px 20px 50px;
     background-color: #999999;
-    border-color: #777777;
     pointer-events: none;
 }
 
-.not_uol .card-body a.link.uol_only:after {
+.not_uol .links a.uol_only:after {
     content: "UoL Only";
     position: absolute;
     right: 10px;
     bottom: 0px;
-    color: #00415f;
-    font-size: 0.5em;
+    color: #193e72;
+    font-size: 1em;
     font-weight: bold;
+    font-family: Lato;
 }
