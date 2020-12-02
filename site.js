@@ -14,6 +14,7 @@ $(document).ready(function(){
         $.ajax({
             url: "https://info.lbrc.le.ac.uk/infomation_governance/text/" +  ps.data("protocol-statement-id"),
         }).always(function(data) {
+            alert(data);
             ps.html(data);
         });
 
