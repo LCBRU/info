@@ -1,10 +1,10 @@
-.not_uhl .links a.uhl_only {
+.not_uhl a.uhl_only {
     color: white;
     background-color: #999999;
     pointer-events: none;
 }
 
-.not_uhl .links a.uhl_only:after {
+.not_uhl a.uhl_only:after {
     content: "UHL Only";
     position: absolute;
     right: 10px;
@@ -16,13 +16,13 @@
 }
 
 
-.not_uol .links a.uol_only {
+.not_uol a.uol_only {
     color: white;
     background-color: #999999;
     pointer-events: none;
 }
 
-.not_uol .links a.uol_only:after {
+.not_uol a.uol_only:after {
     content: "UoL Only";
     position: absolute;
     right: 10px;
