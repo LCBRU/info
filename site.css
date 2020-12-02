@@ -6,9 +6,6 @@
 
 .not_uhl h3.uhl_only:after {
     content: "UHL Only";
-    position: absolute;
-    right: 10px;
-    bottom: 0px;
     color: #193e72;
     font-size: 1em;
     font-weight: bold;
@@ -24,9 +21,6 @@
 
 .not_uol h3.uol_only:after {
     content: "UoL Only";
-    position: absolute;
-    right: 10px;
-    bottom: 0px;
     color: #193e72;
     font-size: 1em;
     font-weight: bold;
