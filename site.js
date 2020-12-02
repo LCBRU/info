@@ -11,9 +11,7 @@ $(document).ready(function(){
     $('.protocol_statement').each(function() {
         ps = $(this);
 
-        url = "https://info.lbrc.le.ac.uk/infomation_governance/text/" +  ps.data("protocol-statement-id");
-
-        alert(url);
+        url = "https://info.lbrc.le.ac.uk/information_governance/security_statement/text/" +  ps.data("protocol-statement-id");
 
         $.get(url, function(data) {
             alert(data);
