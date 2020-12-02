@@ -6,7 +6,6 @@ $.get( "/packages/brc_automad_theme/ip.php", function( data ) {
     }
 });
 
-alert('Guy');
 
 $(document).ready(function(){
     $('.protocol_statement').each(function() {
