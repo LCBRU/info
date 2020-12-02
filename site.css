@@ -2,14 +2,14 @@
     color: white;
     background-color: #999999;
     pointer-events: none;
+    border: none;
 }
 
 .not_uhl h3.uhl_only:after {
-    content: "UHL Only";
-    color: #193e72;
-    font-size: 1em;
+    content: "(UHL Only)";
+    color: #999999;
+    font-size: 0.8em;
     font-weight: bold;
-    font-family: Lato;
 }
 
 
@@ -17,12 +17,12 @@
     color: white;
     background-color: #999999;
     pointer-events: none;
+    border: none;
 }
 
 .not_uol h3.uol_only:after {
-    content: "UoL Only";
-    color: #193e72;
-    font-size: 1em;
+    content: "(UoL Only)";
+    color: #999999;
+    font-size: 0.8em;
     font-weight: bold;
-    font-family: Lato;
 }
