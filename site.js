@@ -9,7 +9,7 @@ $.get( "/packages/brc_automad_theme/ip.php", function( data ) {
 
 $(document).ready(function(){
     $('.protocol_statement').each(function() {
-        alert('Hello');
+        alert(this.data("protocol-statement-id"));
     });
     // // On Page Load this is going to be executed
     // $.ajax({
