@@ -9,20 +9,13 @@ $.get( "/packages/brc_automad_theme/ip.php", function( data ) {
 
 $(document).ready(function(){
     $('.protocol_statement').each(function() {
-        alert($(this).data("protocol-statement-id"));
+        ps = $(this);
+
+        $.ajax({
+            url: "https://info.lbrc.le.ac.uk/infomation_governance/text/" +  ps.data("protocol-statement-id"),
+        }).always(function(data) {
+            ps.html(data);
+        });
+
     });
-    // // On Page Load this is going to be executed
-    // $.ajax({
-    //   url: "Volbo/text.html" ,
-    // }).always(function(data) {
-    //   $("#myTable").html(data);
-    // });
-    // // on Select change this is going to be executed
-    // $("#drop").change(function () {
-    //   $.ajax({
-    //     url: this.value,
-    //   }).always(function(data) {
-    //     $("#myTable").html(data);
-    //   });
-    // });
   });
