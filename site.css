@@ -5,7 +5,7 @@
     border: none;
 }
 
-.not_uhl h3.uhl_only:after {
+.not_uhl h4.uhl_only:after {
     content: "(UHL Only)";
     color: #999999;
     font-size: 0.7em;
@@ -21,7 +21,7 @@
     border: none;
 }
 
-.not_uol h3.uol_only:after {
+.not_uol h4.uol_only:after {
     content: "(UoL Only)";
     color: #999999;
     font-size: 0.7em;
