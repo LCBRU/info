@@ -13,11 +13,15 @@ $(document).ready(function(){
 
         url = "https://info.lbrc.le.ac.uk/information_governance/security_statement/text/" +  ps.data("protocol-statement-id");
 
-        $.get(url, function(data) {
-            content = '<p>' + data.replace(/\n([ \t]*\n)+/g, '</p><p>').replace('/\n/g', '<br />') + '</p>';
-            alert(content);
-            ps.html(content);
-        });
+        callback = function(psc) {
+            return function (data) {
+                content = '<p>' + data.replace(/\n([ \t]*\n)+/g, '</p><p>').replace('/\n/g', '<br />') + '</p>';
+                psc.html(content);
+            }
+        }
+        c = callback(ps);
+
+        $.get(url, c);
 
     });
   });
