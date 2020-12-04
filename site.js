@@ -13,6 +13,8 @@ $(document).ready(function(){
 
         url = "https://info.lbrc.le.ac.uk/information_governance/security_statement/text/" +  ps.data("protocol-statement-id");
 
+        alert(url);
+
         $.get(url, function(data) {
             content = '<p>' + data.replace(/\n([ \t]*\n)+/g, '</p><p>').replace('/\n/g', '<br />') + '</p>';
             ps.html(content);
